@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Languages, SlidersHorizontal, X, Copy, Check } from 'lucide-react';
+import { ArrowRight, Languages, SlidersHorizontal, X, Copy, Check, Github } from 'lucide-react';
 
 interface SlangLevel {
   id: string;
@@ -153,9 +153,18 @@ const TextAnimator: React.FC = () => {
     <div className="flex min-h-screen bg-[#7542ff]">
       {/* Desktop Sidebar */}
       <div className="hidden md:block w-[400px] m-1 p-8 bg-[#111111] rounded-2xl border-gray-800">
-        <div className="flex text-gray-400 text-4xl font-bold mb-6">
+        <div className="flex text-gray-400 text-4xl font-bold mb-6 items-center">
           Translatr
           <Languages className="ml-2 w-8 h-11" />
+          <a
+            href="https://github.com/Vinitj088/TranslatR"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto text-gray-400 hover:text-white transition-colors"
+            aria-label="GitHub Repository"
+          >
+            <Github className="w-8 h-8" />
+          </a>
         </div>
 
         <div className="space-y-8">
@@ -188,6 +197,15 @@ const TextAnimator: React.FC = () => {
           <div className="flex items-center text-gray-400 text-lg font-bold">
             Translatr
             <Languages className="ml-2 w-4 h-5" />
+            <a
+              href="https://github.com/Vinitj088/TranslatR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 text-gray-400 hover:text-white transition-colors"
+              aria-label="GitHub Repository"
+            >
+              <Github className="w-5 h-5" />
+            </a>
           </div>
           <button
             onClick={() => setIsFilterOpen(!isFilterOpen)}
